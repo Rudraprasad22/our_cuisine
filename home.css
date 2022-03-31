@@ -1,0 +1,366 @@
+/* styling for only home page. */
+.hero_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 5rem;
+}
+.hero_left_wrapper{
+    max-width: 360px;
+}
+.hero_img_wrapper{
+    max-width: 400px;
+    width: 80%;
+    margin: 0 auto;
+}
+.hero_heading{
+    font-family: 'Poppins';
+    font-weight: 600;
+    line-height: 1.4em;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--black-1);
+}
+.hero_info{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--black-2);
+}
+.button_wrapper{
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    .hero_wrapper{
+        flex-direction: row;
+        gap: 0;
+    }
+    .hero_left{
+        flex: 3;
+    }
+    .hero_right{
+        flex: 4;
+    }
+    .hero_heading{
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+    .hero_info{
+        margin-bottom: 2rem;
+        text-align: left;
+        font-size: 1.8rem;
+    }
+    .button_wrapper{
+        text-align: left;
+    }
+    .hero_img_wrapper{
+        max-width: none; 
+        width: 90%;
+    }
+}
+
+/* ---------- Our Specials -----------  */
+#ourspecials{
+    padding-top: 10rem;
+}
+.our_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.our_left {
+    display: flex;
+    gap: 1rem;
+}
+.our_item{
+    background-color: var(--lightgreen-1);
+    padding: 1.2rem;
+    padding-top: 5rem;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+.our_item_img{
+    margin-top: calc(-50% - 2rem);
+    /* ---------- A NEW STYLE ---------MUST REMEMBER THE TRICK ------------  */
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    height: 150px;
+    overflow: hidden;
+}
+.our_item_img img{
+    object-fit: cover;
+}
+.our_title{
+    font-size: 1.4rem;
+    color: var(--black-1);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.our_price{
+    color: var(--green-1);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.our_item_stars{
+    height: 1.5rem;
+    width: max-content;
+    margin-bottom: 1rem;
+}
+.our_item_text{
+    font-size: 1.4rem;
+    color: var(--black-2);
+    font-weight: 500;
+}
+.ourspecials_title{
+    font-size: 1.8rem;
+    color: var(--black-1);
+    margin-bottom: 1.5rem;
+}
+.ourspecials_text{
+    font-size: 1.4rem;
+    color: var(--black-2);
+    margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    #ourspecials{
+        padding-top: 15rem;
+    }
+    #ourspecials .container{
+        max-width: 900px;
+    }
+    .our_wrapper{
+        flex-direction: row;
+    }
+    .our_right{
+        flex: 2;
+    }
+    .our_left{
+        flex: 4;
+        gap: 2rem;
+    }
+    .our_item{
+        padding: 2rem;
+        width: 45%;
+    }
+    .our_title{
+        font-size: 2.4rem;
+        line-height: 1.4em;
+        margin-bottom: 1.5rem;
+    }
+    .our_price{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .our_item_stars{
+        margin-bottom: 2rem;
+    }
+    .our_item_text{
+        font-size: 1.6rem;
+    }
+    .ourspecials_title{
+        font-size: 3.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .ourspecials_text{
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* ------- for very small devices -------  */
+@media only screen and (max-width: 300px) {
+    .our_left{
+        flex-wrap: wrap;
+        gap: 10rem;
+    }
+    .our_item{
+        width: 100%;
+    }
+}
+
+/* ------- Discount Styles ------  */
+.disc_wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: var(--lightgreen-1) url(/images/discount-illustration.png) no-repeat bottom right / 100px;
+}
+.disc_images{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.disc_image1{
+    flex: 2;
+}
+.disc_image2{
+    flex: 3;
+}
+.disc_images img{
+    object-fit: cover;
+    border-radius: 12px;
+}
+.disc_text{
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--green-1);
+    margin-bottom: 0.5rem;
+}
+.disc_title{
+    font-size: 1.8rem;
+    color: var(--black-1);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.disc_price{
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.disc_oldprice{
+    color: var(--black-2);
+    text-decoration: line-through;
+}
+.disc_newprice{
+    color: var(--green-1);
+}
+.disc_stars{
+    width: max-content;
+    height: 15px;
+    margin-bottom: 1rem;
+}
+@media only screen and (max-width: 1000px){
+    .disc_wrapper{
+        gap: 2rem;
+    }
+    .disc_image3 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .disc_wrapper{
+        flex-direction: row;
+        gap: 4rem;
+        padding: 2rem;
+        align-items: center;
+        background-size: 150px;
+        margin: 0 auto;
+    }
+    .disc_images{
+        flex: 5;
+        margin-bottom: 0;
+        gap: 2rem;
+    }
+    .disc_image1, .disc_image2, .disc_image3{
+        flex: 3;
+        height: 350px;
+    }
+    .disc_info{
+        flex: 3;
+    }
+    .disc_text{
+        font-size: 2.4rem;
+    }
+    .disc_title{
+        font-size: 3.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .disc_price{
+        font-size: 2.4rem;
+    }
+    .disc_stars{
+        height: 20px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* --------WHY US SECTION STYLE ----------  */
+.whyus_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+.whyus_left{
+    text-align: center;
+}
+.whyus_title{
+    font-family: Poppins;
+    font-size: 1.8rem;
+    color: var(--black-1);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.whyus_text{
+    font-size: 1.4rem;
+}
+.whyus_item_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.whyus_item{
+    background: var(--lightgreen-1);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+.whyus_item_icon{
+    max-width: 56px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.whyus_item_text{
+    font-family: Poppins;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--black-1);
+}
+
+@media only screen and (min-width: 786px){
+    .whyus_wrapper{
+        flex-direction: row;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .whyus_left{
+        flex: 4;
+        text-align: left;
+    }
+    .whyus_right{
+        flex: 3;
+    }
+    .whyus_title{
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+    }
+    .whyus_text{
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .whyus_item_wrapper{
+        gap: 1.5rem;
+    }
+    .whyus_item{
+        padding: 2rem;
+    }
+    .whyus_item_icon{
+        max-width: 65px;
+        margin-bottom: 1.5rem;
+    }
+    .whyus_item_text{
+        font-size: 1.8rem;
+    }
+}
